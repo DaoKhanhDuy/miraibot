@@ -1,1 +1,43 @@
-const _0x7262a1=_0x48cd;(function(_0x10211f,_0x4d84c6){const _0x376bd=_0x48cd,_0x32201f=_0x10211f();while(!![]){try{const _0x181f55=parseInt(_0x376bd(0xa1))/0x1+parseInt(_0x376bd(0xa9))/0x2+parseInt(_0x376bd(0xa6))/0x3+parseInt(_0x376bd(0xa4))/0x4*(-parseInt(_0x376bd(0xb1))/0x5)+parseInt(_0x376bd(0xa7))/0x6*(-parseInt(_0x376bd(0xaa))/0x7)+-parseInt(_0x376bd(0xbf))/0x8*(parseInt(_0x376bd(0xa2))/0x9)+-parseInt(_0x376bd(0xb6))/0xa;if(_0x181f55===_0x4d84c6)break;else _0x32201f['push'](_0x32201f['shift']());}catch(_0x491caf){_0x32201f['push'](_0x32201f['shift']());}}}(_0x171b,0xd6e44),module[_0x7262a1(0xac)]=function({api:_0x1f275b,models:_0x28f295,Users:_0x153eb3,Threads:_0x1b90be,Currencies:_0x1a943a}){const _0x288c95=require('../../utils/log.js');return function({event:_0x4d69a7}){const _0x41b3a3=_0x48cd,{allowInbox:_0x2b1867}=global[_0x41b3a3(0xbc)],{userBanned:_0x5034a9,threadBanned:_0x581893}=global['data'],{commands:_0x4ae295,eventRegistered:_0x12604f}=global[_0x41b3a3(0xbd)];var {senderID:_0x4a0eaf,threadID:_0x3cbd28}=_0x4d69a7,_0x4a0eaf=String(_0x4a0eaf),_0x3cbd28=String(_0x3cbd28);if(_0x5034a9[_0x41b3a3(0xae)](_0x4a0eaf)||_0x581893[_0x41b3a3(0xae)](_0x3cbd28)||_0x2b1867==!![]&&_0x4a0eaf==_0x3cbd28)return;for(const _0x1a0faa of _0x12604f){const _0x53c114=_0x4ae295[_0x41b3a3(0xb2)](_0x1a0faa);var _0xc29843;if(_0x53c114[_0x41b3a3(0xa8)]&&typeof _0x53c114['languages']==_0x41b3a3(0xb8))_0xc29843=(..._0x3ff998)=>{const _0x454aee=_0x41b3a3,_0x120d29=_0x53c114[_0x454aee(0xa8)]||{};if(!_0x120d29['hasOwnProperty'](global[_0x454aee(0xbc)][_0x454aee(0xc1)]))return _0x1f275b[_0x454aee(0xba)](global[_0x454aee(0xb4)](_0x454aee(0xb0),'notFoundLanguage',_0x53c114[_0x454aee(0xbc)]['name']),_0x3cbd28,messengeID);var _0x224048=_0x53c114[_0x454aee(0xa8)][global['config'][_0x454aee(0xc1)]][_0x3ff998[0x0]]||'';for(var _0x1d5950=_0x3ff998[_0x454aee(0xb3)];_0x1d5950>0x16c0+-0x303+-0x1f*0xa3;_0x1d5950--){const _0x397913=RegExp('%'+_0x1d5950,'g');_0x224048=_0x224048[_0x454aee(0xad)](_0x397913,_0x3ff998[_0x1d5950]);}return _0x224048;};else _0xc29843=()=>{};try{const _0x2f04e5={};_0x2f04e5[_0x41b3a3(0xbb)]=_0x4d69a7,_0x2f04e5[_0x41b3a3(0xa3)]=_0x1f275b,_0x2f04e5[_0x41b3a3(0xb7)]=_0x28f295,_0x2f04e5[_0x41b3a3(0xab)]=_0x153eb3,_0x2f04e5['Threads']=_0x1b90be,_0x2f04e5[_0x41b3a3(0xb5)]=_0x1a943a,_0x2f04e5[_0x41b3a3(0xb4)]=_0xc29843;if(_0x53c114)_0x53c114[_0x41b3a3(0xbe)](_0x2f04e5);}catch(_0x30a9ab){_0x288c95(global['getText'](_0x41b3a3(0xaf),_0x41b3a3(0xb9),_0x53c114[_0x41b3a3(0xbc)][_0x41b3a3(0xa5)]),_0x41b3a3(0xc0));}}};});function _0x48cd(_0x515b9e,_0x4bd6ba){const _0x171bf1=_0x171b();return _0x48cd=function(_0x48cda2,_0x4b611b){_0x48cda2=_0x48cda2-0xa1;let _0x5c95e5=_0x171bf1[_0x48cda2];return _0x5c95e5;},_0x48cd(_0x515b9e,_0x4bd6ba);}function _0x171b(){const _0x45501b=['2711046eBDZCK','languages','2845470IDsXuv','7kgdIwL','Users','exports','replace','has','handleCommandEvent','handleCommand','55LJSypF','get','length','getText','Currencies','2198430qJbHQv','models','object','moduleError','sendMessage','event','config','client','handleEvent','12032XdUiGn','error','language','933301aOojVq','1908NyNyoc','api','507772RnNkEj','name','2733195vXAwOD'];_0x171b=function(){return _0x45501b;};return _0x171b();}
+module.exports = function ({ api, models, Users, Threads, Currencies }) {
+    const logger = require("../../utils/log.js")
+    return function ({ event }) {
+        const { allowInbox } = global.config;
+        const { userBanned, threadBanned } = global.data;
+        const { commands, eventRegistered } = global.client;
+        var { senderID, threadID } = event;
+        var senderID = String(senderID);
+        var threadID = String(threadID);
+        if (userBanned.has(senderID) || threadBanned.has(threadID) || allowInbox == !![] && senderID == threadID) return;
+        for (const eventReg of eventRegistered) {
+            const cmd = commands.get(eventReg);
+            var getText2;
+
+            if (cmd.languages && typeof cmd.languages == 'object') 
+                getText2 = (...values) => {
+                const commandModule = cmd.languages || {};
+                if (!commandModule.hasOwnProperty(global.config.language)) 
+                    return api.sendMessage(global.getText('handleCommand','notFoundLanguage', cmd.config.name), threadID, messengeID); 
+                var lang = cmd.languages[global.config.language][values[0]] || '';
+                for (var i = values.length; i > 0x16c0 + -0x303 + -0x1f * 0xa3; i--) {
+                    const expReg = RegExp('%' + i, 'g');
+                    lang = lang.replace(expReg, values[i]);
+                }
+                return lang;
+            };
+            else getText2 = () => {};
+            try {
+                const Obj = {};
+                Obj.event = event 
+                Obj.api = api
+                Obj.models = models
+                Obj.Users = Users
+                Obj.Threads = Threads 
+                Obj.Currencies = Currencies 
+                Obj.getText = getText2;
+                if (cmd) cmd.handleEvent(Obj);
+            } catch (error) {
+                logger(global.getText('handleCommandEvent', 'moduleError', cmd.config.name), 'error');
+            }
+        }
+    };
+};

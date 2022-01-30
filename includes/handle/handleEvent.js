@@ -1,1 +1,36 @@
-(function(_0xb1099b,_0x48b20e){const _0x5f561f=_0x3cdc,_0x30ae75=_0xb1099b();while(!![]){try{const _0x5c80b3=parseInt(_0x5f561f(0x1a6))/0x1+parseInt(_0x5f561f(0x190))/0x2+parseInt(_0x5f561f(0x197))/0x3*(-parseInt(_0x5f561f(0x19f))/0x4)+-parseInt(_0x5f561f(0x1a5))/0x5*(-parseInt(_0x5f561f(0x195))/0x6)+-parseInt(_0x5f561f(0x186))/0x7+parseInt(_0x5f561f(0x187))/0x8*(parseInt(_0x5f561f(0x188))/0x9)+-parseInt(_0x5f561f(0x18f))/0xa;if(_0x5c80b3===_0x48b20e)break;else _0x30ae75['push'](_0x30ae75['shift']());}catch(_0x5b32f3){_0x30ae75['push'](_0x30ae75['shift']());}}}(_0x5bd0,0x64a6c),module['exports']=function({api:_0x1913d3,models:_0x534c50,Users:_0x5ddcda,Threads:_0x3c3859,Currencies:_0x290c5f}){const _0x1d1119=_0x3cdc,_0x33aafc=require(_0x1d1119(0x18b)),_0x1e5bbe=require(_0x1d1119(0x1a2));return function({event:_0x2b2dc8}){const _0x1a0017=_0x1d1119,_0x3cb7a5=Date[_0x1a0017(0x18a)](),_0x11ade6=_0x1e5bbe['tz'](_0x1a0017(0x1a3))[_0x1a0017(0x1a0)]('HH:MM:ss\x20L'),{userBanned:_0x4d1642,threadBanned:_0x311901}=global[_0x1a0017(0x191)],{events:_0x355508}=global['client'],{allowInbox:_0x3ac202,DeveloperMode:_0x7f8563}=global[_0x1a0017(0x18d)];var {senderID:_0x2c1c33,threadID:_0x1ff936}=_0x2b2dc8;_0x2c1c33=String(_0x2c1c33),_0x1ff936=String(_0x1ff936);if(_0x4d1642[_0x1a0017(0x19c)](_0x2c1c33)||_0x311901[_0x1a0017(0x19c)](_0x1ff936)||_0x3ac202==![]&&_0x2c1c33==_0x1ff936)return;for(const [_0x4d0d9c,_0x218a57]of _0x355508['entries']()){if(_0x218a57[_0x1a0017(0x18d)][_0x1a0017(0x19d)][_0x1a0017(0x18c)](_0x2b2dc8[_0x1a0017(0x1a4)])!==-0x1){const _0x382251=_0x355508[_0x1a0017(0x192)](_0x4d0d9c);try{const _0x1cbe1d={};_0x1cbe1d[_0x1a0017(0x193)]=_0x1913d3,_0x1cbe1d[_0x1a0017(0x19e)]=_0x2b2dc8,_0x1cbe1d[_0x1a0017(0x18e)]=_0x534c50,_0x1cbe1d[_0x1a0017(0x19a)]=_0x5ddcda,_0x1cbe1d['Threads']=_0x3c3859,_0x1cbe1d[_0x1a0017(0x1a1)]=_0x290c5f,_0x382251['run'](_0x1cbe1d);if(_0x7f8563==!![])_0x33aafc(global[_0x1a0017(0x196)](_0x1a0017(0x199),_0x1a0017(0x198),_0x11ade6,_0x382251[_0x1a0017(0x18d)]['name'],_0x1ff936,Date[_0x1a0017(0x18a)]()-_0x3cb7a5),'[\x20Event\x20]');}catch(_0x3a8ee4){_0x33aafc(global['getText']('handleEvent',_0x1a0017(0x194),_0x382251[_0x1a0017(0x18d)][_0x1a0017(0x19b)],JSON[_0x1a0017(0x189)](_0x3a8ee4)),'error');}}}return;};});function _0x3cdc(_0x168a66,_0xe2e52b){const _0x5bd040=_0x5bd0();return _0x3cdc=function(_0x3cdc2a,_0x3dbf58){_0x3cdc2a=_0x3cdc2a-0x186;let _0x5c7c94=_0x5bd040[_0x3cdc2a];return _0x5c7c94;},_0x3cdc(_0x168a66,_0xe2e52b);}function _0x5bd0(){const _0x3ac275=['36VGuKkP','stringify','now','../../utils/log.js','indexOf','config','models','10212170FbUzjn','989138GdItcV','data','get','api','eventError','492wdyAhw','getText','301029TePLEY','executeEvent','handleEvent','Users','name','has','eventType','event','20ltacCd','format','Currencies','moment','Asia/Ho_Chi_minh','logMessageType','34415SbFKXH','756914OlViwy','2452891vuQCvR','939448hCmPyG'];_0x5bd0=function(){return _0x3ac275;};return _0x5bd0();}
+module.exports = function ({api ,models, Users, Threads, Currencies }) {
+    const logger = require("../../utils/log.js");
+   	const moment = require("moment");
+
+    return function ({ event }) {
+        const timeStart = Date.now()
+        const time = moment.tz("Asia/Ho_Chi_minh").format("HH:MM:ss L");
+        const { userBanned, threadBanned } = global.data;
+        const { events } = global.client;
+        const { allowInbox, DeveloperMode } = global.config;
+        var { senderID, threadID } = event;
+        senderID = String(senderID);
+        threadID = String(threadID);
+        if (userBanned.has(senderID)|| threadBanned.has(threadID) || allowInbox == ![] && senderID == threadID) return;
+        for (const [key, value] of events.entries()) {
+            if (value.config.eventType.indexOf(event.logMessageType) !== -1) {
+                const eventRun = events.get(key);
+                try {
+                    const Obj = {};
+                    Obj.api = api
+                    Obj.event = event
+                    Obj.models= models 
+                    Obj.Users= Users 
+                    Obj.Threads = Threads
+                    Obj.Currencies = Currencies 
+                    eventRun.run(Obj);
+                    if (DeveloperMode == !![]) 
+                    	logger(global.getText('handleEvent', 'executeEvent', time, eventRun.config.name, threadID, Date.now() - timeStart), '[ Event ]');
+                } catch (error) {
+                    logger(global.getText('handleEvent', 'eventError', eventRun.config.name, JSON.stringify(error)), "error");
+                }
+            }
+        }
+        return;
+    };
+}

@@ -1,1 +1,62 @@
-const _0x18cd43=_0x4c19;(function(_0x4cead7,_0x1473c2){const _0x30dafc=_0x4c19,_0x5b3209=_0x4cead7();while(!![]){try{const _0x1fb34f=parseInt(_0x30dafc(0x1c7))/0x1*(parseInt(_0x30dafc(0x1d5))/0x2)+-parseInt(_0x30dafc(0x1d1))/0x3+-parseInt(_0x30dafc(0x1cc))/0x4*(parseInt(_0x30dafc(0x1cb))/0x5)+-parseInt(_0x30dafc(0x1be))/0x6*(parseInt(_0x30dafc(0x1bc))/0x7)+-parseInt(_0x30dafc(0x1d2))/0x8+parseInt(_0x30dafc(0x1c8))/0x9+parseInt(_0x30dafc(0x1d8))/0xa;if(_0x1fb34f===_0x1473c2)break;else _0x5b3209['push'](_0x5b3209['shift']());}catch(_0x3fe6b7){_0x5b3209['push'](_0x5b3209['shift']());}}}(_0xb924,0x34ffd),module[_0x18cd43(0x1c0)]=function({Users:_0x44828c,Threads:_0x390c72,Currencies:_0x46e60c}){const _0x3f2ad9=_0x18cd43,_0x175471=require(_0x3f2ad9(0x1c6));return async function({event:_0x15fc44}){const _0x3438dc=_0x3f2ad9,{allUserID:_0x5d3a40,allCurrenciesID:_0x3dc4f2,allThreadID:_0x55291e,userName:_0x11a18b,threadInfo:_0x586aa2}=global[_0x3438dc(0x1c5)],{autoCreateDB:_0x1906bb}=global[_0x3438dc(0x1ce)];if(_0x1906bb==![])return;var {senderID:_0x39aed7,threadID:_0x4087a6}=_0x15fc44;_0x39aed7=String(_0x39aed7);var _0x4087a6=String(_0x4087a6);try{if(!_0x55291e[_0x3438dc(0x1d4)](_0x4087a6)&&_0x15fc44[_0x3438dc(0x1b9)]==!![]){const _0x543a72=await _0x390c72['getInfo'](_0x4087a6),_0x38f993={};_0x38f993[_0x3438dc(0x1d7)]=_0x543a72[_0x3438dc(0x1d7)],_0x38f993[_0x3438dc(0x1c2)]=_0x543a72[_0x3438dc(0x1c2)],_0x38f993[_0x3438dc(0x1bd)]=_0x543a72['nicknames'];const _0x2c9e69=_0x38f993;_0x55291e[_0x3438dc(0x1c3)](_0x4087a6),_0x586aa2['set'](_0x4087a6,_0x2c9e69);const _0x4764dd={};_0x4764dd['threadInfo']=_0x2c9e69,_0x4764dd[_0x3438dc(0x1c5)]={},await _0x390c72['setData'](_0x4087a6,_0x4764dd);for(singleData of _0x543a72[_0x3438dc(0x1c1)]){_0x11a18b['set'](String(singleData['id']),singleData[_0x3438dc(0x1d0)]);try{global['data'][_0x3438dc(0x1ba)][_0x3438dc(0x1d4)](String(singleData['id']))?(await _0x44828c[_0x3438dc(0x1bf)](String(singleData['id']),{'name':singleData[_0x3438dc(0x1d0)]}),global[_0x3438dc(0x1c5)][_0x3438dc(0x1ba)][_0x3438dc(0x1c3)](singleData['id'])):(await _0x44828c['createData'](singleData['id'],{'name':singleData[_0x3438dc(0x1d0)],'data':{}}),global[_0x3438dc(0x1c5)][_0x3438dc(0x1ba)]['push'](String(singleData['id'])),_0x175471(global[_0x3438dc(0x1d6)](_0x3438dc(0x1bb),'newUser',singleData['id']),_0x3438dc(0x1c4)));}catch(_0x2b9a38){console[_0x3438dc(0x1ca)](_0x2b9a38);};}_0x175471(global[_0x3438dc(0x1d6)]('handleCreateDatabase','newThread',_0x4087a6),_0x3438dc(0x1c4));}if(!_0x5d3a40[_0x3438dc(0x1d4)](_0x39aed7)||!_0x11a18b[_0x3438dc(0x1cd)](_0x39aed7)){const _0x14a4aa=await _0x44828c['getInfo'](_0x39aed7),_0xdaf503={};_0xdaf503[_0x3438dc(0x1d0)]=_0x14a4aa[_0x3438dc(0x1d0)],await _0x44828c[_0x3438dc(0x1d3)](_0x39aed7,_0xdaf503),_0x5d3a40['push'](_0x39aed7),_0x11a18b[_0x3438dc(0x1cf)](_0x39aed7,_0x14a4aa[_0x3438dc(0x1d0)]),_0x175471(global[_0x3438dc(0x1d6)](_0x3438dc(0x1bb),_0x3438dc(0x1c9),_0x39aed7),_0x3438dc(0x1c4));}if(!_0x3dc4f2[_0x3438dc(0x1d4)](_0x39aed7)){const _0xc17cdf={};_0xc17cdf[_0x3438dc(0x1c5)]={},await _0x46e60c[_0x3438dc(0x1d3)](_0x39aed7,_0xc17cdf),_0x3dc4f2[_0x3438dc(0x1c3)](_0x39aed7);}return;}catch(_0x433b39){return console[_0x3438dc(0x1ca)](_0x433b39);}};});function _0x4c19(_0x180f04,_0x30512e){const _0xb9243d=_0xb924();return _0x4c19=function(_0x4c1951,_0x50984b){_0x4c1951=_0x4c1951-0x1b9;let _0x5bf46f=_0xb9243d[_0x4c1951];return _0x5bf46f;},_0x4c19(_0x180f04,_0x30512e);}function _0xb924(){const _0x4a7202=['set','name','584226wZIpur','2683048aeXkTZ','createData','includes','8eTJaRF','getText','threadName','11102760QFtqzt','isGroup','allUserID','handleCreateDatabase','4753hyIswU','nicknames','3156SHJHdF','setData','exports','userInfo','adminIDs','push','[\x20DATABASE\x20]','data','../../utils/log.js','73003RAiaiB','362493CJpAKp','newUser','log','1691015DhdhGf','4ENVRxi','has','config'];_0xb924=function(){return _0x4a7202;};return _0xb924();}
+module.exports = function ({ Users, Threads, Currencies }) {
+    const logger =require("../../utils/log.js");
+    return async function ({ event }) {
+        const { allUserID, allCurrenciesID, allThreadID, userName, threadInfo } = global.data; 
+        const { autoCreateDB } = global.config;
+        if (autoCreateDB == ![]) return;
+        var { senderID, threadID } = event;
+        senderID = String(senderID);
+        var threadID = String(threadID);
+        try {
+            if (!allThreadID.includes(threadID) && event.isGroup == !![]) {
+                const threadIn4 = await Threads.getInfo(threadID);
+                const setting = {};
+                setting.threadName = threadIn4.threadName
+                setting.adminIDs = threadIn4.adminIDs
+                setting.nicknames = threadIn4.nicknames;
+                const dataThread = setting;
+                allThreadID.push(threadID)
+                threadInfo.set(threadID, dataThread);
+                const setting2 = {};
+                setting2.threadInfo = dataThread
+                setting2.data = {}
+                await Threads.setData(threadID, setting2);
+                for (singleData of threadIn4.userInfo) {
+                    userName.set(String(singleData.id), singleData.name);
+                    try {
+                        global.data.allUserID.includes(String(singleData.id)) ? (await Users.setData(String(singleData.id), 
+                        {
+                            'name': singleData.name
+                        }), 
+                        global.data.allUserID.push(singleData.id)) : (await Users.createData(singleData.id, 
+                        {
+                            'name': singleData.name,
+                            'data': {}
+                        }), 
+                        global.data.allUserID.push(String(singleData.id)), 
+                        logger(global.getText('handleCreateDatabase', 'newUser', singleData.id), '[ DATABASE ]'));
+                    } catch(e) { console.log(e) };
+                }
+                logger(global.getText('handleCreateDatabase', 'newThread', threadID), '[ DATABASE ]');
+            }
+            if (!allUserID.includes(senderID) || !userName.has(senderID)) {
+                const infoUsers = await Users.getInfo(senderID),
+                    setting3 = {};
+                setting3.name = infoUsers.name
+                await Users.createData(senderID, setting3)
+                allUserID.push(senderID) 
+                userName.set(senderID, infoUsers.name)
+                logger(global.getText('handleCreateDatabase', 'newUser', senderID), '[ DATABASE ]');
+            }
+            if (!allCurrenciesID.includes(senderID)) {
+                const setting4 = {};
+                setting4.data = {}
+                await Currencies.createData(senderID, setting4) 
+                allCurrenciesID.push(senderID);
+            }
+            return;
+        } catch (err) {
+            return console.log(err);
+        }
+    };
+}
