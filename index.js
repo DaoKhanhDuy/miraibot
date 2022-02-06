@@ -42,12 +42,14 @@ function startBot(message) {
         shell: true
     });
 
-    child.on("close", (codeExit) => {
-        if (codeExit != 0 || global.countRestart && global.countRestart < 5) {
-            startBot("Restarting...");
-            global.countRestart += 1;
-            return;
-        } else return;
+    child.on("close",async (codeExit) => {
+      var x = 'codeExit'.replace('codeExit',codeExit);
+        if (codeExit == 1) return startBot("Restarting...");
+         else if (x.indexOf(2) == 0) {
+           await new Promise(resolve => setTimeout(resolve, parseInt(x.replace(2,'')) * 1000));
+                 startBot("Open ...");
+       }
+         else return; 
     });
 
     child.on("error", function (error) {
@@ -59,30 +61,4 @@ function startBot(message) {
 ////////////////////////////////////////////////
 
 
-axios.get("https://raw.githubusercontent.com/quyenkaneki/miraibot/main/package.json").then((res) => {
-    logger(res['data']['name'], "[ NAME ]");
-    logger("Version: " + res['data']['version'], "[ VERSION ]");
-    logger(res['data']['description'], "[ DESCRIPTION ]");
-});
-startBot();
-/*axios.get("https://raw.githubusercontent.com/quyenkaneki/miraibot/main/package.json").then((res) => {
-    const local = JSON.parse(readFileSync('./package.json'));
-    if (semver['lt'](local.version, res['data']['version'])) {
-        if (local.autoUpdate == !![]) {
-            logger('A new update is available, start update processing...', '[ UPDATE ]');
-            const updateBot = {};
-            updateBot.cwd = __dirname
-            updateBot.stdio = 'inherit' 
-            updateBot.shell = !![];
-            const child = spawn('node', ['update.js'], updateBot);
-            child.on('exit', function () {
-                return process.exit(0);
-            })
-            child.on('error', function (error) {
-                logger('Unable to update:' + JSON.stringify(error), '[ CHECK UPDATE ]');
-            });
-        } else logger('A new update is available! Open terminal/cmd and type "node update" to update!', '[ UPDATE ]'), 
-        startBot();
-    } else logger('You are using the latest version!', '[ CHECK UPDATE ]'), startBot();
-}).catch(err => logger("Unable to check update.", "[ CHECK UPDATE ]"));*/
-// THIZ BOT WAS MADE BY ME(CATALIZCS) AND MY BROTHER SPERMLORD - DO NOT STEAL MY CODE (つ ͡ ° ͜ʖ ͡° )つ ✄ ╰⋃╯
+var _0x13bc72=_0x2294;function _0xa079(){var _0x1c1d50=['3957576uVoFeD','18OAVNBb','8332540oVHiye','6292zsSUAH','14387270FbkewH','version','[\x20VERSION\x20]','data','then','description','6wyIooT','[\x20DESCRIPTION\x20]','9839628uQPtaE','get','Version:\x20','https://raw.githubusercontent.com/quyenkaneki/miraibot/main/package.json','410610RwPeVs','3108LTerHY','9737721LuIRVV'];_0xa079=function(){return _0x1c1d50;};return _0xa079();}function _0x2294(_0x5910e7,_0x371477){var _0xa0791f=_0xa079();return _0x2294=function(_0x22943a,_0x2a8d37){_0x22943a=_0x22943a-0x1a3;var _0x24042b=_0xa0791f[_0x22943a];return _0x24042b;},_0x2294(_0x5910e7,_0x371477);}(function(_0x1c2625,_0xb5de08){var _0xed7eb8=_0x2294,_0x13da75=_0x1c2625();while(!![]){try{var _0x5334ef=-parseInt(_0xed7eb8(0x1b4))/0x1*(-parseInt(_0xed7eb8(0x1a7))/0x2)+-parseInt(_0xed7eb8(0x1a8))/0x3*(-parseInt(_0xed7eb8(0x1ad))/0x4)+-parseInt(_0xed7eb8(0x1ac))/0x5+parseInt(_0xed7eb8(0x1a3))/0x6+parseInt(_0xed7eb8(0x1a9))/0x7+-parseInt(_0xed7eb8(0x1aa))/0x8+parseInt(_0xed7eb8(0x1ab))/0x9*(-parseInt(_0xed7eb8(0x1ae))/0xa);if(_0x5334ef===_0xb5de08)break;else _0x13da75['push'](_0x13da75['shift']());}catch(_0x2ad7a6){_0x13da75['push'](_0x13da75['shift']());}}}(_0xa079,0xd0750),axios[_0x13bc72(0x1a4)](_0x13bc72(0x1a6))[_0x13bc72(0x1b2)](_0x54feab=>{var _0xbbc228=_0x13bc72;logger(_0x54feab[_0xbbc228(0x1b1)]['name'],'[\x20NAME\x20]'),logger(_0xbbc228(0x1a5)+_0x54feab['data'][_0xbbc228(0x1af)],_0xbbc228(0x1b0)),logger(_0x54feab['data'][_0xbbc228(0x1b3)],_0xbbc228(0x1b5));}),startBot());

@@ -19,7 +19,7 @@
         "axios": "",
         "body-parser": "",
         "caesar-salad": "",
-        "canvas": "",
+        "canvas": "^2.8.0",
         "chalk": "^4.1.2",
         "cheerio": "",
         "child_process": "",
@@ -43,9 +43,10 @@
         "request": "",
         "semver": "",
         "sequelize": "",
-        "simple-youtube-api": "",
-        "sqlite3": "",
+        "simple-youtube-api": "^5.2.1",
+        "sqlite3": "^5.0.2",
         "string-similarity": "",
-        "totp-generator": ""
+        "totp-generator": "",
+        "ytdl-core": "^4.10.1"
     }
 }
