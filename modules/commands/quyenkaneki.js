@@ -35,7 +35,7 @@ else if (day == 5) var day = "Thứ sáu"
 else if (day == 6) var day = "Thứ 7"
 else if (day == 7) var day = "Chủ nhật"
 else return console.log(day)
-    axios.get('https://quyenkaneki-api.herokuapp.com/api/gaisexy.php').then(res => {
+    axios.get('https://apiquyenkaneki.tk/api/gaisexy.php').then(res => {
     let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
     let callback = function () {
                     api.sendMessage({
