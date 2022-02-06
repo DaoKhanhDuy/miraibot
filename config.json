@@ -1,0 +1,210 @@
+{
+    "language": "vi",
+    "keyActive": "",
+    "DeveloperMode": false,
+    "autoCreateDB": true,
+    "allowInbox": true,
+    "autoClean": false,
+    "commandDisabled": [],
+    "eventDisabled": [],
+    "EMAIL": "",
+    "PASSWORD": "",
+    "OTPKEY": "",
+    "BOTNAME": "Mirai Bot",
+    "PREFIX": "'",
+    "ADMINBOT": [
+        "100077180438067"
+    ],
+    "DATABASE": {
+        "sqlite": {
+            "storage": "data.sqlite"
+        }
+    },
+    "APPSTATEPATH": "appstate.json",
+    "FCAOption": {
+        "forceLogin": true,
+        "listenEvents": true,
+        "pauseLog": true,
+        "logLevel": "error",
+        "selfListen": false,
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36"
+    },
+    "version": "1.2.14",
+    "bannerfb": {
+        "APIKEY": "ntkhang"
+    },
+    "bannerv2": {
+        "APIKEY": "ntkhang"
+    },
+    "caesar": {
+        "caeserPassword": "266303"
+    },
+    "cave": {
+        "cooldownTime": 1000000
+    },
+    "daily": {
+        "cooldownTime": 43200000,
+        "rewardCoin": 200
+    },
+    "diemdanh": {
+        "cooldownTime": 3000000
+    },
+    "gif": {
+        "TENOR": "73YIAOY3ACT1"
+    },
+    "help": {
+        "autoUnsend": true,
+        "delayUnsend": 120
+    },
+    "ins": {
+        "APIKEY": ""
+    },
+    "linkword": {
+        "APIKEY": ""
+    },
+    "math": {
+        "WOLFRAM": "T8J8YV-H265UQ762K"
+    },
+    "pin": {
+        "APIKEY": "chinhdz"
+    },
+    "rankup": {
+        "autoUnsend": true,
+        "unsendMessageAfter": 100
+    },
+    "rname": {
+        "APIKEY": "mi451266190"
+    },
+    "sauce": {
+        "SAUCENAO_API": "61e802b1478f8e85198f28ed6ac2de6efe5d0a41"
+    },
+    "shortlink": {
+        "bitlyAPI": ""
+    },
+    "sim": {
+        "APIKEY": "Meew_AjEYDnwNoNcfzE6LyYTsdXgDuBXWpQ"
+    },
+    "sing": {
+        "YOUTUBE_API": "AIzaSyCKLLk55EafnP___8fMuA0KCaUVW8EPScY",
+        "ManhG_KEY": "ĐIỀN KEY VÀO ĐÂY?(REG KEY TẠI WEB mzkapi.me)"
+    },
+    "sortword": {
+        "APIKEY": ""
+    },
+    "surprise": {
+        "log": true,
+        "out": "",
+        "kickAll": "",
+        "delThread": ""
+    },
+    "taixiu3": {
+        "API_KEY": "keyTest5h"
+    },
+    "teach": {
+        "APIKEY": ""
+    },
+    "tiktok": {
+        "APIKEY": ""
+    },
+    "tikvideo": {
+        "APIKEY": "5b26fd1784msh6f189adce962cf1p1df7b9jsnf15b99d6c794"
+    },
+    "tlt": {
+        "APIKEY": "chinhdz"
+    },
+    "video": {
+        "YOUTUBE_API": "AIzaSyCKLLk55EafnP___8fMuA0KCaUVW8EPScY",
+        "ManhG_KEY": "ĐIỀN KEY VÀO ĐÂY?(REG KEY TẠI WEB mzkapi.me)"
+    },
+    "voice": {
+        "zalo_apikey": "",
+        "fpt_apikey": ""
+    },
+    "weather": {
+        "OPEN_WEATHER": "081c82065cfee62cb7988ddf90914bdd"
+    },
+    "working": {
+        "cooldownTime": 1200000
+    },
+    "adminUpdate": {
+        "autoUnsend": true,
+        "sendNoti": true,
+        "timeToUnsend": 10
+    },
+    "log": {
+        "enable": true
+    },
+    "ytbmp4": {
+        "YOUTUBE_API": "AIzaSyCKLLk55EafnP___8fMuA0KCaUVW8EPScY"
+    },
+    "banner": {
+        "APIKEY": "ntkhangGoatBot"
+    },
+    "banner2": {
+        "APIKEY": "ntkhangGoatBot"
+    },
+    "bannerbw": {
+        "APIKEY": "ntkhangGoatBot"
+    },
+    "fbcover": {
+        "APIKEY": "HAPPY-NEW-YEAR"
+    },
+    "getuser": {
+        "APIKEY": "531532681600063|PZKvEhQ2eQ_XGkh5GlhMv6HBS60"
+    },
+    "ghep": {
+        "APIKEY": "531532681600063|PZKvEhQ2eQ_XGkh5GlhMv6HBS60"
+    },
+    "hitbutt": {
+        "APIKEY": ""
+    },
+    "img": {
+        "APIKEY": ""
+    },
+    "meewmeew": {
+        "auto_update": true
+    },
+    "rank": {
+        "APIKEY": "6628568379%7Cc1e620fa708a1d5696fb991c1bde5662"
+    },
+    "slap": {
+        "APIKEY": ""
+    },
+    "work": {
+        "cooldownTime": 1200000
+    },
+    "xoso": {
+        "APIKEY": ""
+    },
+    "sing2": {
+        "YOUTUBE_API": "AIzaSyCKLLk55EafnP___8fMuA0KCaUVW8EPScY",
+        "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
+    },
+    "covid": {
+        "APIKEY": ""
+    },
+    "safetycheck": {
+        "APIKEY": "AIzaSyAyPQHnnLU2S6Fqy2x6eZIyFOQGe6Xwiek"
+    },
+    "lixi": {
+        "cooldownTime": 1200000
+    },
+    "pokemon": {
+        "APIKEY": ""
+    },
+    "fbvideo": {
+        "API_KEY": "mzkFree_722124509AC10"
+    },
+    "boctham": {
+        "cooldownTime": 1800000
+    },
+    "aio": {
+        "APIKEY": "Meew_AjEYDnwNoNcfzE6LyYTsdXgDuBXWpQ"
+    },
+    "sing3": {
+        "YOUTUBE_API": "AIzaSyDEE1-zZSRVI8lTaQOVsIAQFgL-_BJKvhk"
+    },
+    "video2": {
+        "YOUTUBE_API": "AIzaSyDEE1-zZSRVI8lTaQOVsIAQFgL-_BJKvhk"
+    }
+}
