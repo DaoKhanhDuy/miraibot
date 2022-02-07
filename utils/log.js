@@ -17,13 +17,13 @@ module.exports = (data, option) => {
 module.exports.loader = (data, option) => {
 	switch (option) {
 		case "warn":
-			console.log(chalk.bold.hex("#FF0000")('[ BOT DIE ] » ') + data);
+			console.log(chalk.bold.hex("#FF0000")('» •KANEKI• « ') + data);
 			break;
 		case "error":
-			console.log(chalk.bold.hex("#FFFF00")('[ BOT DIE ] » ') + data);
+			console.log(chalk.bold.hex("#FFFF00")('» •KANEKI• « ') + data);
 			break;
 		default:
-			console.log(chalk.bold.hex("#00FFFF")(`[ BOT DIE ] » `) + data);
+			console.log(chalk.bold.hex("#00FFFF")('» •KANEKI• « ') + data);
 			break;
 	}
 }
