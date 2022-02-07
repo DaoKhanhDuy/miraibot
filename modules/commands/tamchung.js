@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "ProCoderMew fix by bhoang",
     description: "",
-    commandCategory: "18+",
+    commandCategory: "nsfw",
     usages: "[tag]",
     cooldowns: 5,
     dependencies: {
