@@ -11,7 +11,6 @@ module.exports.run = async ({ api, event, args }) => {
     const axios = require('axios');
     const request = require('request');
     const fs = require("fs");
-    let name = await Users.getNameUser(event.senderID)
     const moment = require("moment-timezone");
     var gio = moment.tz("Asia/Ho_Chi_Minh").format("HH");
     var phut = moment.tz("Asia/Ho_Chi_Minh").format("mm");
@@ -39,7 +38,7 @@ else return console.log(day)
     let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
     let callback = function () {
                     api.sendMessage({
-                                                body: `Chào ${name}\nHôm nay là ${day}\nNgày : ${ngay} Tháng ${thang} Năm ${nam}!\nBây giờ là: ${gio} giờ ${phut} phút ${giay} giây\n💬Thính: ${poem}`,
+                                                body: `Hôm nay là ${day}\nNgày : ${ngay} Tháng ${thang} Năm ${nam}!\nBây giờ là: ${gio} giờ ${phut} phút ${giay} giây\n💬Thính: ${poem}`,
                         attachment: fs.createReadStream(__dirname + `/cache/anh.${ext}`)
                     }, event.threadID, () => fs.unlinkSync(__dirname + `/cache/anh.${ext}`), event.messageID);
                 };
