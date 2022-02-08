@@ -10,7 +10,8 @@ module.exports.config = {
 };
 
 module.exports.run = function({ api, event, args, getText }) {
-if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 if (args[0] == "all") {
  return api.getThreadList(1000, null, ["INBOX"], (err, list) => {
  	if (err) throw err;

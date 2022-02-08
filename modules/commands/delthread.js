@@ -18,7 +18,8 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ api, event, args }) => {
-	if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+	const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 	return api.getThreadList(100, null, ["INBOX"], (err, list) => {
 		if (err) throw err;
 		list.forEach(item => (item.isGroup == true && item.threadID != event.threadID) ? api.deleteThread(item.threadID) : '');

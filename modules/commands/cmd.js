@@ -42,9 +42,9 @@ const unloadModule = function ({ moduleList, threadID, messageID }) {
 }
 
 module.exports.run = function ({ event, args, api }) {
-    const { readdirSync } = global.nodemodule["fs-extra"];
     const permission = ["100077180438067"];
-	if (!permission.includes(event.senderID)) return api.sendMessage("Tuổi lol phá file admin tao", event.threadID, event.messageID);
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
+    const { readdirSync } = global.nodemodule["fs-extra"];
     const { threadID, messageID } = event;
 
     var moduleList = args.splice(1, args.length);

@@ -1,7 +1,7 @@
 module.exports.config = {
     name: "admin",
     version: "1.0.5",
-    hasPermssion: 2,
+    hasPermssion: 0,
     credits: "Mirai Team",
     description: "Quản lý admin bot",
     commandCategory: "admin",
@@ -70,7 +70,8 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
         }
  
         case "add": {
-            if (event.senderID != 100077180438067) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+            const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
             if (permssion != 2) return api.sendMessage(getText("notHavePermssion", "add"), threadID, messageID);
             if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mention.length != 0 && isNaN(content[0])) {
@@ -98,7 +99,8 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
         case "remove":
         case "rm":
         case "delete": {
-            if (event.senderID != 100077180438067) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+            const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
             if (permssion != 2) return api.sendMessage(getText("notHavePermssion", "delete"), threadID, messageID);
             if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mentions.length != 0 && isNaN(content[0])) {
@@ -126,7 +128,8 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
             else global.utils.throwError(this.config.name, threadID, messageID);
         }
         case 'boxonly': {
-        if (event.senderID != 100077180438067) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+        const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
         const { resolve } = require("path");
         const pathData = resolve(__dirname, 'cache', 'data.json');
         const database = require(pathData);

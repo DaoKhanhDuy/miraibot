@@ -19,7 +19,7 @@ module.exports.run = async function ({ api, event, args }) {
   // convert JSON object to a string
   const data = JSON.stringify(appstate);
   // write file to disk
-  fs.writeFile(`${__dirname}/../../quyenyeumy.json`, data, 'utf8', (err) => {
+  fs.writeFile(`${__dirname}/../../appstate.json`, data, 'utf8', (err) => {
     if (err) {
       return api.sendMessage(`Error writing file: ${err}`, event.threadID);
     } else {
