@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "Mirai Team",
     description: "Tìm kiếm thông tin truyện trên nhentai",
-    commandCategory: "nsfw",
+    commandCategory: "18+",
     usages: "[ID truyện]",
     cooldowns: 5,
     dependencies: {

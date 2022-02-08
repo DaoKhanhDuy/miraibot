@@ -12,7 +12,8 @@
 };
 
 module.exports. run = async function ({api, event})  {
-  const permission = ["100058779052162"]; if (!permission.includes(event.senderID)) return api.sendMessage("Làm j thek :v", event.threadID, event.messageID);
+  const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
   return api.sendMessage(`Tự động cấm người dùng nếu spam ${num} lần/${timee}s`, event.threadID, event.messageID);
 };
 

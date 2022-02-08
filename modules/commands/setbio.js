@@ -10,7 +10,8 @@ module.exports.config = {
 };
 
 module.exports.run = async function({ api, event, args }) {
-  const permission = ["100058779052162"]; if (!permission.includes(event.senderID)) return api.sendMessage("_callad Anh Quyền Kaneki ơi, có đứa muốn đổi tiểu sử em nè!", event.threadID, event.messageID);
+const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 	 api.changeBio(`${args.join(" ")}`);
 	  api.sendMessage(`Đã đổi tiểu sử của bot là :${args.join(" ")}`, event.threadID);
 }

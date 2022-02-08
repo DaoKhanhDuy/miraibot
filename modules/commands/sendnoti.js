@@ -21,8 +21,8 @@ module.exports.languages = {
 }
 
 module.exports.run = async ({ api, event, args, getText }) => {
-const permission = ["100056953105174"];
-if (!permission.includes(event.senderID)) return api.sendMessage("Quyền lồn biên giới?", event.threadID, event.messageID);
+const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 if (event.type == "message_reply") {
 const request = global.nodemodule["request"];
 const fs = require('fs')

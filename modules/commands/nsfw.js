@@ -22,7 +22,8 @@ module.exports.languages = {
 }
 
 module.exports.run = async function ({ event, api, Threads, getText }) {
-    if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+    const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
     const { threadID, messageID } = event;
     const { getData, setData } = Threads;
     var type;
