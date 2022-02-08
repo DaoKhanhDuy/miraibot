@@ -25,7 +25,8 @@ module.exports.run = async ({ api, event, args, getText }) => {
   if (args.join() == "") {api.sendMessage("bạn có thể dùng thongbao kèm\n1: png\n2: jpg\n3: mp3\n4: mp4",event.threadID, event.messageID);
     }
   if (args[0] == "1") {
-    if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+    const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 if (event.type == "message_reply") {
 const request = global.nodemodule["request"];
 const fs = require('fs')
@@ -77,7 +78,8 @@ else {
   return api.sendMessage(getText("sendSuccess", count), event.threadID, () => (cantSend.length > 0 ) ? api.sendMessage(getText("sendFail", cantSend.length), event.threadID, event.messageID) : "", event.messageID); }
 }
    else if (args[0] == "2") {
-if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+    const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 if (event.type == "message_reply") {
 const request = global.nodemodule["request"];
 const fs = require('fs')
@@ -131,7 +133,8 @@ else {
 }
 
    else if (args[0] == "3") {
-if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+    const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 if (event.type == "message_reply") {
 const request = global.nodemodule["request"];
 const fs = require('fs')
@@ -184,7 +187,8 @@ else {
   return api.sendMessage(getText("sendSuccess", count), event.threadID, () => (cantSend.length > 0 ) ? api.sendMessage(getText("sendFail", cantSend.length), event.threadID, event.messageID) : "", event.messageID); }
 }
  else if (args[0] == "4") {
-if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+  const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 if (event.type == "message_reply") {
 const request = global.nodemodule["request"];
 const fs = require('fs')

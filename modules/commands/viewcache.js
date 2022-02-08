@@ -12,7 +12,8 @@ module.exports.config = {
 module.exports.handleReply = ({ api, event, handleReply }) => {
 	if(event.senderID != handleReply.author) return; 
 	const fs = global.nodemodule["fs-extra"];
-  const permission = ["100058779052162"]; if (!permission.includes(event.senderID)) return api.sendMessage("Làm j thek :v", event.threadID, event.messageID);
+const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 	var filego = []
 		pathus = __dirname+`/cache/${handleReply.files[event.body -1]}`
 		filego.push(fs.createReadStream(pathus)); 
