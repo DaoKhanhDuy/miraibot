@@ -8,7 +8,6 @@ module.exports.config={
 	cooldowns:5
 },
 module.exports.handleReply=async function({api:e,event:a,args:n,Threads:s,handleReply:t}){
-	if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
 	const{threadID:o,messageID:r}=a;
 	if(parseInt(a.senderID)!==parseInt(t.author))return;
 	const d=require("moment-timezone").tz("Asia/Ho_Chi_minh").format("HH:MM:ss L");

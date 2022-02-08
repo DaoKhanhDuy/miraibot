@@ -30,8 +30,8 @@ module.exports.run = async ({
     args,
     Users
 }) => {
-    const permission = ["100077008073768"];
-    if (!permission.includes(event.senderID)) return api.sendMessage("Mày tuổi loll phá file admin tao", event.threadID, event.messageID);
+    const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
     const pathh = require('path');
     const fs = require('fs');
     const banUser = require('./cache/banned.json');

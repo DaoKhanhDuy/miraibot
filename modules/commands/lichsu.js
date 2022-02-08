@@ -15,9 +15,8 @@ module.exports.handleReaction = async function({ handleReaction, api, event, glo
 }
 
 module.exports.run = async function({ api, event, client, Threads, args }) {
-	const permission = ["100058779052162"];
-	if (!permission.includes(event.senderID)) return api.sendMessage("Làm gì thek :v", event.threadID, event.messageID);
-	
+const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 	let allbox = (await api.getThreadList( 100, null, ["INBOX"])).filter(group => group.isSubscribed && group.isGroup);
 	
 	var msg = "";

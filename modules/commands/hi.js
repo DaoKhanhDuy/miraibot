@@ -38,7 +38,7 @@ module.exports.handleEvent = async ({
 	var msg = {
 		body: `Chào ${name}, chúc bạn một ngày tốt lành ❤️`,
 		attachment: (await global.nodemodule["axios"]({
-			url: (await global.nodemodule["axios"]('https://apiquyenkaneki.tk/api/gai/gai.php')).data.data,
+			url: (await global.nodemodule["axios"]('https://apiquyenkaneki.tk/api/gai.php')).data.data,
 			method: "GET",
 			responseType: "stream"
 		})).data

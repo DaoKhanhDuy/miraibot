@@ -12,7 +12,8 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event, Threads, getText }) {
-  if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+  const permission = ["100077180438067"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
   var { threadID, messageID, senderID } = event;
   //if (senderID == global.data.botID) return;
 

@@ -15,8 +15,6 @@ module.exports.languages = {
 }
 
 module.exports.run = async function ({ api, event, Threads, getText }) {
-  const permission = ["100058779052162"];
-  if (!permission.includes(event.senderID)) return api.sendMessage("Làm gì thek :v", event.threadID, event.messageID);
   const { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
 
